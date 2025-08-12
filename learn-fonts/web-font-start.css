@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'ChunkFive';
+    src: url('./transfonter/ChunkFive-Regular.woff2') format('woff2'),
+        url('./transfonter/ChunkFive-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./transfonter/OpenSans.woff2') format('woff2'),
+        url('./transfonter/OpenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* General setup */
 
 html {
@@ -15,14 +33,17 @@ body {
 /* Typography */
 
 h1 {
+  font-family: "ChunkFive";
   font-size: 3.2rem;
 }
 
 h2 {
+  font-family: "ChunkFive";
   font-size: 2.4rem;
 }
 
 p {
+  font-family: "Open Sans";
   font-size: 1.4rem;
   line-height: 1.6;
   word-spacing: 0.6rem;
