@@ -1,5 +1,10 @@
-// Store a reference to the <h1> in a variable
-const myHeading = document.querySelector("h1");
+const myImg = document.querySelector("img");
 
-// Update the text content of the <h1>
-myHeading.textContent = "Hello World!";
+myImg.addEventListener("click", () => {
+    const mySrc = myImg.getAttribute("src");
+    if (mySrc === "images/firefox-icon.png") {
+        myImg.setAttribute("src", "images/odin-lined.png")
+    } else {
+        myImg.setAttribute("src", "images/firefox-icon.png") 
+    }
+});
