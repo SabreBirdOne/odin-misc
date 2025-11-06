@@ -10,6 +10,9 @@ theHobbit.info(); // "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
 */
 
 function Book(title, author, numPages) {
+    if (!new.target) {
+        throw Error("missing new before constructor call");
+    }
     this.title = title;
     this.author = author;
     this.numPages = numPages;
@@ -23,3 +26,4 @@ function Book(title, author, numPages) {
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295);
 theHobbit.info();
 console.log(theHobbit.info());
+const brokenHobbit = Book("The Hobbit", "J.R.R Tolkien", 295);
