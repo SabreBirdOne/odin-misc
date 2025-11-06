@@ -157,3 +157,6 @@ As a common solution, all properties that describe the state of a particular obj
 like stomach above, should be written into that object. That prevents such problems.
 
 */
+
+// https://www.javascripttutorial.net/javascript-this/
+// Learn more about the this keyword in Javascript.
