@@ -8,3 +8,4 @@ learn-forms/form-controls/webfontkit-20250820-153658.zip
 webpack-practice/dist/*
 webpack-practice/node_modules/*
 webpack-practice/package-lock.json
+loadNVM.sh
