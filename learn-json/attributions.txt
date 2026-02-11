@@ -1,0 +1,5 @@
+This Odin Project lesson:
+https://www.theodinproject.com/lessons/node-path-javascript-json
+
+MDN:
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON
