@@ -6,26 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-
-    <img src="#">
+    <input type="text" id="searchInput">
     <div>
         <button id="newImgButton">New Image</button>
     </div>
+    <img src="#">
     
     <script>
         const img = document.querySelector('img');
         img.alt = "Cat gif from GIPHY";
         img.width = 900;
 
+        const searchInput = document.querySelector("input#searchInput");
         const newImgButton = document.querySelector("button#newImgButton");
         newImgButton.addEventListener("click", ()=>{
-            fetch('https://api.giphy.com/v1/gifs/translate?api_key=dS5ZmVPi3m92RBK2WDSQoL2Tk6mElHcX&s=cats')
+            fetch(
+                `https://api.giphy.com/v1/gifs/translate?api_key=dS5ZmVPi3m92RBK2WDSQoL2Tk6mElHcX&s=${searchInput.value}`
+            )
             .then(function(response){
                 return response.json();
             }).then(function(promise){
                 img.src = promise.data.images.original.url;
             });
-        })
+        });
     </script>
 </body>
 </html>
