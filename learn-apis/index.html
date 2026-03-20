@@ -24,9 +24,16 @@
                 `https://api.giphy.com/v1/gifs/translate?api_key=dS5ZmVPi3m92RBK2WDSQoL2Tk6mElHcX&s=${searchInput.value}`
             )
             .then(function(response){
+                if (!response.ok){
+                    throw new Error(`Response status: ${response.status}`);
+                }
                 return response.json();
-            }).then(function(promise){
+            })
+            .then(function(promise){
                 img.src = promise.data.images.original.url;
+            })
+            .catch(function(error){
+                console.log(error.message);
             });
         });
     </script>
