@@ -9,7 +9,8 @@
     <img src="#">
     <script>
         const img = document.querySelector('img');
-        img.alt = "Cat gif from GIPHY"
+        img.alt = "Cat gif from GIPHY";
+        img.width = 900;
         fetch('https://api.giphy.com/v1/gifs/translate?api_key=dS5ZmVPi3m92RBK2WDSQoL2Tk6mElHcX&s=cats')
         .then(function(response){
             return response.json();
